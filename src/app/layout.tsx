@@ -25,7 +25,10 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://academiq-edu.vercel.app/"),
+  metadataBase: new URL("https://academiq-edu.vercel.app"),
+  verification: {
+    google: "vm3BIePc13dk4gBAx5W0eH2MDKE__dfIhBSAY9Ipa7k",
+  },
   title: {
     default: "أكاديميك | منصة الطلاب للدراسات العليا",
     template: "%s | أكاديميك",

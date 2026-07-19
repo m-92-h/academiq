@@ -3,7 +3,7 @@ import { arabicTopics } from "@/data/subjects/arabic/content";
 import { englishTopics } from "@/data/subjects/english/content";
 import { csTopics } from "@/data/subjects/cs/content";
 
-const BASE_URL = "https://academiq-edu.vercel.app/";
+const BASE_URL = "https://academiq-edu.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
