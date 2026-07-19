@@ -63,9 +63,11 @@ function ReadingProgressBar({ color }: { color: string }) {
       }
     };
 
-    targetRef.current = getScrollProgress();
-    currentRef.current = targetRef.current;
-    setProgress(targetRef.current);
+    requestAnimationFrame(() => {
+      targetRef.current = getScrollProgress();
+      currentRef.current = targetRef.current;
+      setProgress(targetRef.current);
+    });
 
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => {

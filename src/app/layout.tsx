@@ -1,28 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Cairo } from "next/font/google";
+import dynamic from "next/dynamic";
+import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 import { Toaster } from "sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const Footer = dynamic(() => import("@/components/layout/Footer"), { ssr: true });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const cairo = Cairo({
+const cairo = localFont({
+  src: "../../public/fonts/Cairo-VariableFont_slnt,wght.ttf",
   variable: "--font-cairo",
-  subsets: ["arabic", "latin"],
-  weight: ["400", "600", "700", "800"],
   display: "swap",
+  declarations: [
+    {
+      prop: "unicode-range",
+      value: "U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF, U+0020-007F",
+    },
+  ],
 });
+
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://academiq-edu.vercel.app"),
@@ -78,8 +76,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={`${cairo.variable} ${geistSans.variable} ${geistMono.variable} h-full antialiased`} suppressHydrationWarning>
-      <body className="min-h-full flex flex-col">
+    <html lang="ar" dir="rtl" className={`${cairo.variable} h-full antialiased`} suppressHydrationWarning>
+      <body className="min-h-full flex flex-col font-sans">
         <ThemeProvider>
           <TooltipProvider>
             <Navbar />

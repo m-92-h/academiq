@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import nextDynamic from "next/dynamic";
 import Hero from "@/components/home/Hero";
-import Subjects from "@/components/home/Subjects";
-import ExamCards from "@/components/home/ExamCards";
-import FeaturesSection from "@/components/home/FeaturesSection";
-import { ProgressSection } from "@/components/home/ProgressSection";
-import LearningSteps from "@/components/home/LearningSteps";
 
-export const dynamic = 'force-static'
+const Subjects = nextDynamic(() => import("@/components/home/Subjects"), { ssr: true });
+const ExamCards = nextDynamic(() => import("@/components/home/ExamCards"), { ssr: true });
+const FeaturesSection = nextDynamic(() => import("@/components/home/FeaturesSection"), { ssr: true });
+const LearningSteps = nextDynamic(() => import("@/components/home/LearningSteps"), { ssr: true });
+
+const ProgressSection = nextDynamic(() => import("@/components/home/ProgressSection").then(mod => mod.ProgressSection), { ssr: true });
+
+export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "الرئيسية | أكاديميك",
