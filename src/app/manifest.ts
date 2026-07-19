@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "أكاديميك",
     short_name: "أكاديميك",
-    description: "منصة تعليمية مجانية لمساعدة طلاب الدراسات العليا في العراق على اجتياز امتحانات الكفاءة",
+    description: "منصة تعليمية مجانية لطلاب الدراسات العليا في العراق للتحضير لامتحانات الكفاءة",
     start_url: "/",
     display: "standalone",
     orientation: "portrait",
@@ -14,13 +14,13 @@ export default function manifest(): MetadataRoute.Manifest {
     dir: "rtl",
     icons: [
       {
-        src: "/images/academiq-icon-192.png",
+        src: "/images/icon-192.png",
         sizes: "192x192",
         type: "image/png",
         purpose: "maskable",
       },
       {
-        src: "/images/academiq-icon-512.png",
+        src: "/images/icon-512.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "any",

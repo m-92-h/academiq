@@ -6,8 +6,8 @@
     </linearGradient>
   </defs>
 
-  <!-- Background -->
-  <rect x="0" y="0" width="64" height="64" rx="14" fill="url(#iconGradSq)"/>
+  <!-- Background — no rounded corners -->
+  <rect x="0" y="0" width="64" height="64" fill="url(#iconGradSq)"/>
 
   <!-- Arch / أ reimagined -->
   <path d="M 32 8

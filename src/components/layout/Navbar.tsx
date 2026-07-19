@@ -32,7 +32,7 @@ export default function Navbar() {
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6">
         {/* Logo */}
         <Link href="/" className="group flex items-center gap-2.5 transition-opacity hover:opacity-85">
-          <Image src="/images/logo.svg" alt="شعار أكاديميك" width={24} height={24} priority />
+          <Image src="/images/logo.svg" className="rounded-[21.875%]" alt="شعار أكاديميك" width={24} height={24} priority />
           <span className="text-[17px] font-bold leading-none tracking-tight text-card-foreground">أكاديميك</span>
         </Link>
 

@@ -139,7 +139,7 @@ export default function Footer() {
           {/* Col 1 — Brand */}
           <div className="flex flex-col gap-5">
             <div className="flex items-center gap-2.5">
-              <Image src="/images/logo.svg" alt="شعار أكاديميك" width={28} height={28} />
+              <Image src="/images/logo.svg" className="rounded-[21.875%]" alt="شعار أكاديميك" width={28} height={28} />
               <span className="text-xl font-bold leading-none tracking-tight text-card-foreground">أكاديميك</span>
             </div>
 
