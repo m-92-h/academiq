@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/private/"],
     },
-    sitemap: "https://academiq.org/sitemap.xml",
+    sitemap: "https://academiq-edu.vercel.app/sitemap.xml",
   };
 }

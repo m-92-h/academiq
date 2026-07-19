@@ -124,7 +124,7 @@ export default async function Image() {
           letterSpacing: "0.05em",
         }}
       >
-        academiq.org
+        https://academiq-edu.vercel.app/
       </div>
     </div>,
     { ...size },

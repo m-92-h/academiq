@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${title} | أكاديميك`,
       description,
-      url: `https://academiq.org/courses/${subject}`,
+      url: `https://academiq-edu.vercel.app/courses/${subject}`,
     },
   };
 }

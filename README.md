@@ -2,7 +2,7 @@
 
 A free educational platform helping Iraqi graduate students pass national competency exams in Arabic, English, and Computer Science.
 
-🌐 **Live:** [academiq.org](https://academiq.org)
+🌐 **Live:** [academiq-edu](https://academiq-edu.vercel.app/)
 
 ---
 

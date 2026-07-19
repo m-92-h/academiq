@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "مواد المراجعة | أكاديميك",
     description: "تصفّح مواد المراجعة لامتحانات الكفاءة الوطنية في اللغة العربية والإنجليزية والحاسبات.",
-    url: "https://academiq.org/courses",
+    url: "https://academiq-edu.vercel.app/courses",
   },
 };
 

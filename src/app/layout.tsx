@@ -25,7 +25,7 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://academiq.org"),
+  metadataBase: new URL("https://academiq-edu.vercel.app/"),
   title: {
     default: "أكاديميك | منصة الطلاب للدراسات العليا",
     template: "%s | أكاديميك",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ar_IQ",
-    url: "https://academiq.org",
+    url: "https://academiq-edu.vercel.app/",
     siteName: "أكاديميك",
     title: "أكاديميك | منصة الطلاب للدراسات العليا",
     description: "منصة تعليمية مجانية لمساعدة طلاب الدراسات العليا في العراق على اجتياز امتحانات الكفاءة في اللغة العربية والإنجليزية والحاسبات",

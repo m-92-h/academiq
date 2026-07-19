@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "أكاديميك | منصة الطلاب للدراسات العليا",
     description: "منصة تعليمية مجانية تساعد طلاب الدراسات العليا في العراق على اجتياز امتحانات الكفاءة الوطنية في اللغة العربية والإنجليزية والحاسبات",
-    url: "https://academiq.org",
+    url: "https://academiq-edu.vercel.app/",
   },
 };
 

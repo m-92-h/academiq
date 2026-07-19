@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "الأسئلة الشائعة | أكاديميك",
     description: "إجابات على أكثر الأسئلة شيوعاً حول القبول في الدراسات العليا وامتحانات الكفاءة الوطنية في العراق.",
-    url: "https://academiq.org/guide/faq",
+    url: "https://academiq-edu.vercel.app/guide/faq",
   },
 };
 

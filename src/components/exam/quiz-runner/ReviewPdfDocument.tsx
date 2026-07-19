@@ -408,7 +408,7 @@ export function ReviewPdfDocument({ questions, answers, score, total, subjectLab
               <Text> الأستاذ محمد حسين</Text>
             </Link>
             <Text style={styles.footerSeparator}> | </Text>
-            <Link style={styles.footerLink} src="https://academiq-nine.vercel.app/">
+            <Link style={styles.footerLink} src="https://academiq-edu.vercel.app/">
               <Text>أكاديميك</Text>
             </Link>
           </View>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "دليل امتحان الكفاءة الوطني | أكاديميك",
     description: "كل ما تحتاج معرفته عن امتحان الكفاءة الوطني — هيكل الامتحان، درجات النجاح، وجدول الدرجات.",
-    url: "https://academiq.org/guide/national-exam",
+    url: "https://academiq-edu.vercel.app/guide/national-exam",
   },
 };
 

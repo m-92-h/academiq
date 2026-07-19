@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "الاختبارات التجريبية | أكاديميك",
     description: "اختبر مستواك بامتحانات تجريبية تحاكي امتحانات الكفاءة الوطنية في اللغة العربية والإنجليزية والحاسبات.",
-    url: "https://academiq.org/exam",
+    url: "https://academiq-edu.vercel.app/exam",
   },
 };
 

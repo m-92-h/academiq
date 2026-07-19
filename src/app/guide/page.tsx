@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "دليل القبول في الدراسات العليا | أكاديميك",
     description: "دليل مبسّط خطوة بخطوة للتقديم على الدراسات العليا في العراق — من تحديد التخصص حتى اجتياز الامتحان الوطني.",
-    url: "https://academiq.org/guide",
+    url: "https://academiq-edu.vercel.app/guide",
   },
 };
 
