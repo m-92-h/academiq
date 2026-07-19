@@ -7,7 +7,7 @@ import { ProgressSection } from "@/components/home/ProgressSection";
 import LearningSteps from "@/components/home/LearningSteps";
 
 export const metadata: Metadata = {
-  title: "الرئيسية",
+  title: "الرئيسية | أكاديميك",
   description: "أكاديميك — منصة تعليمية مجانية تساعد طلاب الدراسات العليا في العراق على اجتياز امتحانات الكفاءة الوطنية في اللغة العربية والإنجليزية والحاسبات",
   openGraph: {
     title: "أكاديميك | منصة الطلاب للدراسات العليا",
