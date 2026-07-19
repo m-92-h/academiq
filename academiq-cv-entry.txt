@@ -1,0 +1,13 @@
+Academiq — Graduate Studies Exam Prep Platform          GitHub | Demo
+
+  • Built a full-stack Arabic educational platform with Next.js 16 App
+    Router, TypeScript, and Tailwind CSS, covering 3 exam subjects with
+    dynamic topic pages, quizzes, and an RTL-first responsive UI.
+
+  • Implemented a structured content system with 100+ lesson topics
+    across Arabic, English, and Computer Science, each with key points,
+    reading references, and randomized practice quizzes per subject.
+
+  • Applied complete SEO and PWA setup including a dynamic sitemap,
+    per-page metadata, Edge-rendered Open Graph images, and a web
+    manifest for installable offline-ready experience.
