@@ -2,6 +2,16 @@ import type { Metadata } from "next";
 import { SubjectView } from "@/components/courses/SubjectView";
 import { SUBJECTS_META } from "@/data/subjectsMeta";
 
+export const dynamic = 'force-static'
+
+export async function generateStaticParams() {
+  return [
+    { subject: 'arabic' },
+    { subject: 'english' },
+    { subject: 'cs' },
+  ]
+}
+
 interface PageProps {
   params: Promise<{ subject: string }>;
 }

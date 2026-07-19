@@ -1,6 +1,19 @@
 import { TopicLayout } from "@/components/courses/TopicLayout";
-import { getTopicData } from "@/data/subjects";
+import { getTopicData, getTopicIds } from "@/data/subjects";
 import type { Metadata } from "next";
+
+export const dynamic = 'force-static'
+
+export async function generateStaticParams() {
+  const subjects = ['arabic', 'english', 'cs']
+  
+  return subjects.flatMap((subject) =>
+    getTopicIds(subject).map((topic: string) => ({
+      subject,
+      topic,
+    }))
+  )
+}
 
 interface PageProps {
   params: Promise<{ subject: string; topic: string }>;

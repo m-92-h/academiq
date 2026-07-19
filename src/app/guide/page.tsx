@@ -3,6 +3,8 @@ import GuideHero from "@/components/guide/GuideHero";
 import AdmissionSteps from "@/components/guide/AdmissionSteps";
 import Link from "next/link";
 
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: "دليل القبول",
   description: "دليل مبسّط خطوة بخطوة للتقديم على الدراسات العليا في العراق — من تحديد التخصص حتى اجتياز الامتحان الوطني والمباشرة بالدراسة.",

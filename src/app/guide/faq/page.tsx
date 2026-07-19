@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import GuideFAQ from "@/components/guide/GuideFAQ";
 
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: "الأسئلة الشائعة",
   description: "إجابات على أكثر الأسئلة شيوعاً حول القبول في الدراسات العليا وامتحانات الكفاءة الوطنية في العراق.",

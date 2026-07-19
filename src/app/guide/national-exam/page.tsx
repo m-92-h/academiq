@@ -3,6 +3,8 @@ import NationalExamSection from "@/components/guide/NationalExamSection";
 import ExamScoresTables from "@/components/guide/ExamScoresTables";
 import GuideFooterCTA from "@/components/guide/GuideFooterCTA";
 
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: "دليل امتحان الكفاءة الوطني",
   description: "كل ما تحتاج معرفته عن امتحان الكفاءة الوطني — هيكل الامتحان، درجات النجاح، جدول الدرجات، والنصائح للاستعداد.",
