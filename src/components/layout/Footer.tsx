@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { Copy, Check, CreditCard, BookOpen, ClipboardList, LifeBuoy } from "lucide-react";
-import { useState } from "react";
+// import { useState } from "react";
 
 //  Social Icons
 const LinkedInIcon = () => (
@@ -20,7 +20,7 @@ const InstagramIcon = () => (
 );
 
 // Data
-const MASTER_NUMBER = "07XXXXXXXXX"; // ← ضع رقمك هنا
+// const MASTER_NUMBER = "07XXXXXXXXX"; // ← ضع رقمك هنا
 
 const courses = [
   { href: "/courses/cs", label: "مراجعة الحاسوب" },
@@ -97,32 +97,32 @@ function FooterLink({ href, children, external = false }: { href: string; childr
   );
 }
 
-function CopyButton({ text }: { text: string }) {
-  const [copied, setCopied] = useState(false);
+// function CopyButton({ text }: { text: string }) {
+//   const [copied, setCopied] = useState(false);
 
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+//   const handleCopy = async () => {
+//     await navigator.clipboard.writeText(text);
+//     setCopied(true);
+//     setTimeout(() => setCopied(false), 2000);
+//   };
 
-  return (
-    <motion.button
-      onClick={handleCopy}
-      whileTap={{ scale: 0.9 }}
-      className="flex h-7 w-7 items-center justify-center rounded-md transition-colors duration-200"
-      style={{
-        color: copied ? "var(--accent)" : "var(--text-secondary)",
-        backgroundColor: "var(--bg-secondary)",
-        border: "1px solid var(--border)",
-      }}
-      aria-label="نسخ الرقم"
-      title="نسخ الرقم"
-    >
-      {copied ? <Check size={14} /> : <Copy size={14} />}
-    </motion.button>
-  );
-}
+//   return (
+//     <motion.button
+//       onClick={handleCopy}
+//       whileTap={{ scale: 0.9 }}
+//       className="flex h-7 w-7 items-center justify-center rounded-md transition-colors duration-200"
+//       style={{
+//         color: copied ? "var(--accent)" : "var(--text-secondary)",
+//         backgroundColor: "var(--bg-secondary)",
+//         border: "1px solid var(--border)",
+//       }}
+//       aria-label="نسخ الرقم"
+//       title="نسخ الرقم"
+//     >
+//       {copied ? <Check size={14} /> : <Copy size={14} />}
+//     </motion.button>
+//   );
+// }
 
 // Main Footer
 export default function Footer() {
@@ -218,7 +218,7 @@ export default function Footer() {
             </ul>
 
             {/* Mastercard — professional institutional style */}
-            <div
+            {/* <div
               className="mt-6 rounded-xl p-4"
               style={{
                 border: "1px solid var(--border)",
@@ -243,7 +243,7 @@ export default function Footer() {
                 </span>
                 <CopyButton text={MASTER_NUMBER} />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
