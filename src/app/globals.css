@@ -64,7 +64,7 @@
 /* ---------- Tailwind theme bridge ---------- */
 @theme inline {
   --color-background: var(--bg-primary);
-  --color-foreground: var(--bg-secondary);
+  --color-foreground: var(--text-primary);
   --color-card: var(--bg-card);
   --color-card-foreground: var(--text-primary);
   --color-muted: var(--bg-secondary);
