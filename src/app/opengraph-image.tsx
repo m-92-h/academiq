@@ -1,140 +1,265 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "أكاديميك | منصة الطلاب للدراسات العليا";
+export const alt = "Academiq | Graduate Studies Platform for Iraqi Students";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function Image() {
-  const cairoFont = await fetch(
-    new URL("/fonts/Cairo-Bold.ttf", "https://academiq-edu.vercel.app")
-  ).then((res) => res.arrayBuffer());
+  const cairoFont = await fetch(new URL("/fonts/Cairo-Bold.ttf", "https://academiq-edu.vercel.app")).then((res) => res.arrayBuffer());
+
+  const cairoRegular = await fetch(new URL("/fonts/Cairo-Regular.ttf", "https://academiq-edu.vercel.app")).then((res) => res.arrayBuffer());
+
+  const subjects = [
+    { label: "Arabic Language", color: "#60a5fa" },
+    { label: "English Language", color: "#34d399" },
+    { label: "Computer Science", color: "#c084fc" },
+  ];
 
   return new ImageResponse(
-    (
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        background: "#09090b",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      {/* ── Mesh gradient blobs ── */}
       <div
         style={{
-          background:
-            "linear-gradient(135deg, #0b0f19 0%, #111827 50%, #0f1f0f 100%)",
-          width: "100%",
-          height: "100%",
+          position: "absolute",
+          top: -200,
+          right: -100,
+          width: 600,
+          height: 600,
+          borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(99,102,241,0.35) 0%, transparent 65%)",
+          display: "flex",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          bottom: -180,
+          left: 80,
+          width: 500,
+          height: 500,
+          borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(34,197,94,0.2) 0%, transparent 65%)",
+          display: "flex",
+        }}
+      />
+      <div
+        style={{
+          position: "absolute",
+          top: 200,
+          left: -80,
+          width: 360,
+          height: 360,
+          borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(192,132,252,0.18) 0%, transparent 65%)",
+          display: "flex",
+        }}
+      />
+
+      {/* ── Noise texture lines (horizontal) ── */}
+      {[0.08, 0.22, 0.45, 0.68, 0.85].map((pct, i) => (
+        <div
+          key={i}
+          style={{
+            position: "absolute",
+            top: `${pct * 100}%`,
+            left: 0,
+            right: 0,
+            height: 1,
+            background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent)",
+            display: "flex",
+          }}
+        />
+      ))}
+
+      {/* ── Main card (glassmorphism) ── */}
+      <div
+        style={{
+          position: "absolute",
+          top: 60,
+          left: 60,
+          right: 60,
+          bottom: 60,
+          borderRadius: 24,
+          border: "1px solid rgba(255,255,255,0.08)",
+          background: "rgba(255,255,255,0.03)",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          fontFamily: "Cairo",
-          direction: "rtl",
-          position: "relative",
+          alignItems: "flex-start",
+          justifyContent: "space-between",
+          padding: "52px 64px",
         }}
       >
-        {/* Background decorative circles */}
-        <div
-          style={{
-            position: "absolute",
-            top: -100,
-            right: -100,
-            width: 400,
-            height: 400,
-            borderRadius: "50%",
-            background: "rgba(30, 58, 138, 0.2)",
-            display: "flex",
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            bottom: -80,
-            left: -80,
-            width: 300,
-            height: 300,
-            borderRadius: "50%",
-            background: "rgba(59, 130, 246, 0.15)",
-            display: "flex",
-          }}
-        />
-
-        {/* Logo / Brand mark */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginBottom: 32,
-            background: "rgba(30, 58, 138, 0.3)",
-            borderRadius: 24,
-            padding: "16px 40px",
-            border: "1px solid rgba(59, 130, 246, 0.4)",
-          }}
-        >
-          <div
-            style={{
-              fontSize: 100,
-              color: "#60a5fa",
-              fontWeight: "bold",
-              letterSpacing: "-2px",
-              lineHeight: 1,
-            }}
-          >
-            أكاديميك
-          </div>
-        </div>
-
-        {/* Tagline */}
-        <div
-          style={{
-            fontSize: 38,
-            color: "#e2e8f0",
-            marginTop: 16,
-            opacity: 0.85,
-            textAlign: "center",
-            maxWidth: 800,
-            lineHeight: 1.4,
-          }}
-        >
-          منصة تعليمية مجانية لطلاب الدراسات العليا في العراق للتحضير لامتحانات الكفاءة
-        </div>
-
-        {/* Subject badges */}
+        {/* ── Top row: domain left + logo badge right ── */}
         <div
           style={{
             display: "flex",
             flexDirection: "row",
-            gap: 16,
-            marginTop: 48,
+            alignItems: "center",
+            justifyContent: "space-between",
+            width: "100%",
           }}
         >
-          {["اللغة العربية", "اللغة الإنجليزية", "الحاسوب"].map((subject) => (
+          {/* Domain — left side */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+              background: "rgba(255,255,255,0.05)",
+              border: "1px solid rgba(255,255,255,0.1)",
+              borderRadius: 999,
+              padding: "8px 20px",
+            }}
+          >
             <div
-              key={subject}
               style={{
-                background: "rgba(255,255,255,0.08)",
-                border: "1px solid rgba(255,255,255,0.15)",
-                borderRadius: 50,
-                padding: "10px 28px",
-                fontSize: 24,
-                color: "#94a3b8",
+                width: 8,
+                height: 8,
+                borderRadius: "50%",
+                background: "#22c55e",
+                display: "flex",
+              }}
+            />
+            <span
+              style={{
+                fontSize: 18,
+                color: "rgba(255,255,255,0.4)",
+                letterSpacing: "0.03em",
+                fontFamily: "monospace",
               }}
             >
-              {subject}
+              academiq-edu.vercel.app
+            </span>
+          </div>
+
+          {/* Logo badge — right side */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+              background: "linear-gradient(135deg, rgba(99,102,241,0.3), rgba(192,132,252,0.2))",
+              border: "1px solid rgba(99,102,241,0.4)",
+              borderRadius: 16,
+              padding: "10px 24px",
+            }}
+          >
+            {/* Graduation cap SVG */}
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#a5b4fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+              <path d="M6 12v5c3 3 9 3 12 0v-5" />
+            </svg>
+            <span
+              style={{
+                fontSize: 20,
+                color: "#a5b4fc",
+                fontWeight: "bold",
+                letterSpacing: "0.01em",
+              }}
+            >
+              Graduate Studies Platform
+            </span>
+          </div>
+        </div>
+
+        {/* ── Center: main headline ── */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            gap: 20,
+            width: "100%",
+          }}
+        >
+          {/* Title */}
+          <div
+            style={{
+              fontSize: 110,
+              fontWeight: "bold",
+              letterSpacing: "-4px",
+              lineHeight: 1,
+              textAlign: "left",
+              background: "linear-gradient(135deg, #ffffff 40%, rgba(255,255,255,0.55))",
+              backgroundClip: "text",
+              color: "transparent",
+            }}
+          >
+            Academiq
+          </div>
+
+          {/* Subtitle */}
+          <div
+            style={{
+              fontSize: 28,
+              color: "rgba(255,255,255,0.5)",
+              textAlign: "left",
+              maxWidth: 720,
+              lineHeight: 1.55,
+              fontWeight: "normal",
+            }}
+          >
+            A free learning platform for Iraqi graduate students preparing for national competency exams
+          </div>
+        </div>
+
+        {/* ── Bottom row: subject pills ── */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "flex-start",
+            gap: 14,
+            width: "100%",
+          }}
+        >
+          {subjects.map((s) => (
+            <div
+              key={s.label}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                background: "rgba(255,255,255,0.05)",
+                border: `1px solid ${s.color}40`,
+                borderRadius: 999,
+                padding: "10px 26px",
+              }}
+            >
+              <div
+                style={{
+                  width: 8,
+                  height: 8,
+                  borderRadius: "50%",
+                  background: s.color,
+                  display: "flex",
+                }}
+              />
+              <span
+                style={{
+                  fontSize: 22,
+                  color: s.color,
+                  fontWeight: "bold",
+                }}
+              >
+                {s.label}
+              </span>
             </div>
           ))}
         </div>
-
-        {/* Domain */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: 32,
-            fontSize: 22,
-            color: "#475569",
-            letterSpacing: "0.05em",
-            fontFamily: "monospace",
-          }}
-        >
-          https://academiq-edu.vercel.app/
-        </div>
       </div>
-    ),
+    </div>,
     {
       ...size,
       fonts: [
@@ -142,6 +267,12 @@ export default async function Image() {
           name: "Cairo",
           data: cairoFont,
           weight: 700,
+          style: "normal",
+        },
+        {
+          name: "Cairo",
+          data: cairoRegular,
+          weight: 400,
           style: "normal",
         },
       ],
