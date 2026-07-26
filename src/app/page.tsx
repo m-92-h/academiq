@@ -12,7 +12,7 @@ const ProgressSection = nextDynamic(() => import("@/components/home/ProgressSect
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "الرئيسية | أكاديميك",
+  title: "أكاديميك",
   description: "أكاديميك — منصة تعليمية مجانية تساعد طلاب الدراسات العليا في العراق على اجتياز امتحانات الكفاءة الوطنية في اللغة العربية والإنجليزية والحاسبات",
   openGraph: {
     title: "أكاديميك | منصة الطلاب للدراسات العليا",
