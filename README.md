@@ -28,14 +28,6 @@ A free educational platform helping Iraqi graduate students pass national compet
 | Fonts | Cairo (Arabic), Geist (Latin) |
 | Deployment | Vercel |
 
-## Getting Started
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
 
 ## Project Structure
 
