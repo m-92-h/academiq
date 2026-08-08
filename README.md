@@ -51,4 +51,5 @@ src/
 
 ## License
 
-This project is open-source and free to use for educational purposes.
+All rights reserved © 2026 Mohamed Hussein.
+This source code is proprietary. You may view the code, but you are not permitted to copy, modify, distribute, sublicense, or claim ownership of any part of this work without explicit written permission from the author.
